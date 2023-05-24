@@ -1,0 +1,10 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const Blogs = new Schema({
+    name: {type: String , maxLenght : 255},
+    decription: {type: String , maxLenght : 600},
+    image: {type: String , maxLenght : 255},
+    ceateAt: {type: Date , default : Date.now},
+})
+
+module.exports = mongoose.model('Blogs',Blogs);

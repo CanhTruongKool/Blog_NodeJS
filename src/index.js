@@ -3,6 +3,12 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// add database
+const db = require("./config/db")
+db.connect();
+
+// set up routes
+const route = require('./routes')
 
 //get css direction
 app.use(express.static(__dirname + '/public'));
@@ -22,6 +28,10 @@ app.set("views", "./src/resources/views");
 const morgan = require('morgan')
 app.use(morgan('combined'))*/
 
+//Route init
+route(app)
+
+/* sau khi dung routes thi bo het link qua routes
 // neu then trangchu vao sau / thi luc duyet web cung phai them trang chu sau port
 app.get('/', (req, res) => {
   res.render('home')
@@ -37,6 +47,8 @@ app.get('/search', (req, res) => {
   // alert content of query
   console.log(req.query)
 })
+*/
+
 //post method
 app.use(express.urlencoded({
   extended:true
