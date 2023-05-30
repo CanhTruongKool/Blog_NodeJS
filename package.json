@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/CanhTruongKool/Blog_NodeJS#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
     "mongoose": "^7.2.0",

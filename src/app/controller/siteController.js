@@ -21,7 +21,7 @@ class siteController{
         */
             res.render('search')
     }
-
+   
     search(req,res)
     {
         res.render('search')

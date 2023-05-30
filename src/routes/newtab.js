@@ -1,15 +1,10 @@
 const express = require('express');
-const { index } = require('../app/controller/newtabController');
+const newtabController = require('../app/controller/newtabController');
 const router = express.Router();
 
-const newtabController = require('../app/controller/newtabController')
-
-
-newtabController.index
-//slug
-router.use('/:slug',newtabController.show);
-router.use('/',newtabController.index);
-
-
+router.get('/create', newtabController.create);
+router.post('/store', newtabController.store);
+router.get('/:slug', newtabController.show);
+router.get('/', newtabController.index);
 
 module.exports = router;

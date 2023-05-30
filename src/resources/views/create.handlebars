@@ -1,0 +1,22 @@
+<h1>This is create view page</h1>
+<form method="post" action="/newtab/store">
+  <div class="form-group">
+    <label for="name"></label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Enter Name">
+    <small id="emailHelp" class="form-text text-muted">Enter Blog's name.</small>
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="description" placeholder="Description">
+  </div>
+  <button type="submit" class="btn btn-primary" style="margin: 0 auto; margin-top: 10px; align-items: center; text-align: center;" onclick="submitModel()">Submit</button>
+</form>
+<script>
+  function submitModel()
+  {
+    const title = document.getElementById('exampleInputEmail1').value; // Assuming the input element has an id of "title"
+  const content = document.getElementById('exampleInputPassword1').value; // Assuming the input element has an id of "content"
+
+  alert(title + ' ' +content)
+  }
+</script>
